@@ -54,7 +54,7 @@ const Header = () => {
       </div>
 
       <div className="relative z-10 flex flex-col justify-between min-h-screen">
-        <div className="flex flex-row items-center justify-between bg-gradient-to-b from-black px-4 lg:px-16 py-8">
+        <div className="flex flex-row items-center justify-between bg-gradient-to-b from-zinc-800 px-4 lg:px-16 py-8">
           <span className="flex flex-row gap-2 items-center text-white w-1/2">
             <CiMenuBurger />
             <span className="hidden">{dataHeader[0]}</span>
@@ -74,7 +74,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="text-center flex flex-col items-center lg:px-16 py-8 bg-gradient-to-t from-black">
+        <div className="text-center flex flex-col items-center lg:px-16 py-8 bg-gradient-to-t from-zinc-950">
           <h1 className="text-2xl max-w-sm lg:text-7xl font-bold text-gray-100 py-12">
             {dataHeader[2]}
           </h1>

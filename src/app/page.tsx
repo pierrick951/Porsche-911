@@ -1,6 +1,11 @@
+import Under from "./_components/Under";
 
 export default function Home() {
   return (
-    <p className="bg-zinc-800">suivant</p>
+    <main>
+      <section>
+        <Under />
+      </section>
+    </main>
   );
 }
