@@ -6,7 +6,6 @@ export const dataHeader: string[] = [
 ];
 
 export const dataUnder: string[] = [
-    "911",
   "911 Turbo 50 Years",
   "Gasoline",
   "Configure",  
