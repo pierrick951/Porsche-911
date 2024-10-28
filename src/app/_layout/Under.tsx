@@ -4,23 +4,24 @@ import Image from "next/image";
 import Svg911 from "../_components/Svg911";
 import porsche from "@/public/porsche.avif";
 import Tittle from "../_components/Tittle";
+import back from "@/public/back.avif"
 
 type Props = {};
 function Under({}: Props) {
   return (
-    <div className="h-auto bg-gradient-to-t from-zinc-800 to-zinc-950">
-      <div className=" justify-center items-center relative flex h-64">
-        <div>
+    <div className=" grid grid-cols-3 grid-rows-2 bg-zinc-950">
+      <div className="relative  h-[200px] md:h-96 bg-gradient-to-t from-zinc-800 to-zinc-950  row-start-1 col-span-3">
+        
           <Svg911 />
-        </div>
+
 
         <Image
-          className="absolute translate-y-20"
+        className="absolute bottom-0 translate-y-10 lg:translate-y-1/3 xl:translate-x-48 "
           src={porsche}
           alt="porsche 911"
         />
       </div>
-      <div className="  flex flex-col justify-center items-center min-h-96  h-auto bg-zinc-950 lg:pt-20 ">
+      <div className="  flex flex-col justify-center items-center   h-60 sm:h-80 bg-zinc-950 lg:pt-20 row-start-2 col-start-2 ">
         <Tittle text={dataUnder[0]} />
         <small className="mt-4 text-gray-100 bg-gray-800/60 rounded py-0.5 px-1 mb-6">
           {dataUnder[1]}

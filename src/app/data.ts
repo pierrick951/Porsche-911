@@ -1,3 +1,5 @@
+import { nanoid } from "nanoid";
+
 export const dataHeader: string[] = [
   "Menu",
   "Porsche",
@@ -12,3 +14,13 @@ export const dataUnder: string[] = [
   "Configure",  
   "New and used inventory",
 ];
+
+
+export const dataStats  = [
+  {id:nanoid(), title:"2.7", sub: "s", text : "Acceleration 0 - 100 km/h with Sport Chrono Package"},
+  {id:nanoid(), title:"478", sub: "kW / ", text : "Power (kW)/Power (hp)", title2:"640", sub2:"hp"},
+  {id:nanoid(), title:"330", sub: "km/h ", text : "Top track speed with summer tires", },
+
+]
+
+export const phraseStat  : string  = "View all technical details"
