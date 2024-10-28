@@ -60,9 +60,13 @@ const Header = () => {
           </span>
           <div>
             <Svg />
-            <img 
-            className="md:hidden"
-            src="https://cdn.ui.porsche.com/porsche-design-system/crest/porsche-crest.8a292fb@2x.png" width="30" height="40" alt="Porsche"></img>
+            <img
+              className="md:hidden"
+              src="https://cdn.ui.porsche.com/porsche-design-system/crest/porsche-crest.8a292fb@2x.png"
+              width="30"
+              height="40"
+              alt="Porsche"
+            ></img>
           </div>
 
           <div className="w-1/2 flex justify-end">
@@ -71,12 +75,14 @@ const Header = () => {
         </div>
 
         <div className="text-center flex flex-col items-center lg:px-16  bg-gradient-to-t from-zinc-950">
-          <h1 className="text-2xl max-w-sm lg:text-7xl font-bold text-gray-100 py-12">
-            {dataHeader[2]}
-          </h1>
+
+            <h1 className="flex flex-col items-center gap-2 text-3xl sm:flex-row md:text-5xl lg:text-7xl font-semibold text-gray-100 py-12 text-center">
+              <span>{dataHeader[2]}</span>
+              <span>{dataHeader[3]}</span>
+            </h1>
           <div className="flex flex-col lg:flex-row w-full items-center">
-            <p className="font-semibold text-xl lg:text-2xl px-5 text-gray-100 w-full max-w-5xl text-center justify-center mx-auto lg:translate-x-6 pb-5">
-              {dataHeader[3]}
+            <p className=" font-normal  md:font-medium text-xl lg:text-2xl px-5 text-gray-100 w-full max-w-5xl   justify-center mx-auto lg:translate-x-6 pb-5">
+              {dataHeader[4]}
             </p>
 
             <button
