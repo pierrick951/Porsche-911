@@ -1,5 +1,7 @@
 import Stats from "./_layout/Stats";
 import Under from "./_layout/Under";
+import Turbo from "./_layout/Turbo"
+
 
 export default function Home() {
   return (
@@ -12,6 +14,9 @@ export default function Home() {
       </section>
       <section>
       <Stats/>
+      </section>
+      <section>
+       <Turbo/>
       </section>
     </main>
   );

@@ -7,12 +7,12 @@ import { phraseStat } from "../data";
 type Props = {};
 function Stats({}: Props) {
   return (
-    <div className="h-auto bg-zinc-950 flex  flex-col lg:flex-row lg:gap-10 justify-center items-center py-16">
+    <div className="h-auto bg-zinc-950 flex  flex-col xl:flex-row lg:gap-10 justify-center items-center py-16">
       <div>
         {dataStats.map((item) => {
           return (
             <div>
-              <div className=" flex flex-col justify-center lg:text-start items-center lg:items-start px-6">
+              <div className=" flex flex-col justify-center xl:text-start items-center xl:items-start px-6">
                 <div className=" flex flex-row gap-2 py-3 lg:py-5 items-end bg-red-4 text-nowrap ">
                   <h2 className="text-white text-4xl  md:text-8xl">
                     {item.title}
