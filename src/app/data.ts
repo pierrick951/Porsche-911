@@ -19,6 +19,13 @@ import carousel23 from "@/public/carousel23.avif";
 import carousel24 from "@/public/carousel24.avif";
 import carousel25 from "@/public/carousel25.avif";
 
+//frop carousel three
+import chrono from '@/public/carouselchrono.avif'
+import turbo from '@/public/turboturbo.avif'
+import wheel from '@/public/wheel.avif'
+import wallet from '@/public/wallet.avif'
+import letter from '@/public/letter.avif'
+import carousel36 from "@/public/carousel36.avif";
 export const dataHeader: string[] = [
   "Menu",
   "Porsche",
@@ -140,13 +147,46 @@ export const dataCarouselTwo: dataCarouselType = [
   },
 ];
 
+export const stringCrouselTwo = "Highlights.";
 
-export const stringCrouselTwo = "Highlights."
-export const string360view  :string[]= [
-
-
+export const string360view: string[] = [
   "50 years of Turbo. In 360 degrees.",
   "Interior",
   "Exterior",
-  "Start 360° view"
-] 
+  "Start 360° view",
+];
+
+export const stringCarouselThree: string = "Heritage Design package.";
+
+export const dataCarouselthree: dataCarouselType = [
+  {
+    id: 1,
+    image: turbo,
+    title: "Exclusive nostalgia.",
+  },
+  {
+    id: 2,
+    image: wheel,
+    title: "Sport Classic wheel",
+  },
+  {
+    id: 3,
+    image: letter,
+    title: "Lettering and decorative graphics.",
+  },
+  {
+    id: 4,
+    image: wallet,
+    title: "Interior.",
+  },
+  {
+    id: 5,
+    image: chrono,
+    title: "Sport Chrono watch. ",
+  },
+  {
+    id: 6,
+    image: carousel36,
+    title: "Embossing.",
+  },
+];

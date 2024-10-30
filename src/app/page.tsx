@@ -1,24 +1,25 @@
-"use client"
+"use client";
+
+import ReactPlayer from "react-player";
 
 import Stats from "./_layout/Stats";
 import Under from "./_layout/Under";
 import Turbo from "./_layout/Turbo";
+
 import Carousel from "./_components/Carousel";
 import Image from "next/image";
 import turbo2 from "@/public/turbo2.avif";
 import portiere from "@/public/portiere.avif";
 import { dataNine } from "./data";
 import lastturbo from "@/public/lastturbo.avif";
-
-
-import ReactPlayer from "react-player";
-
+import { stringCarouselThree } from "./data";
 
 import {
   dataCarouselOne,
   dataCarouselTwo,
   stringCrouselTwo,
   string360view,
+  dataCarouselthree
 } from "../app/data";
 import Tittle from "./_components/Tittle";
 import { MdOutlineViewInAr } from "react-icons/md";
@@ -123,23 +124,28 @@ export default function Home() {
         </div>
       </section>
       <section>
-      <div className=" py-40 w-full  flex items-center justify-center relative px-10   ">
-          <div className="bg-red-400 rounded-2xl max-w-6xl overflow-hidden">
+        <div className="py-20 lg:py-40 w-full  flex items-center justify-center relative px-10   ">
+          <div className="bg-red-400 rounded-2xl max-w-6xl  overflow-hidden">
             <ReactPlayer
               url="https://videos.porsche.com/id/282a7695-b017-48f6-a7ac-eb8a22fec50d/911turbo50yearsintrodesktop/hls.m3u8"
               controls={false}
               playing={true}
               muted
               loop
-             width="100%"
+              width="100%"
               height="100%"
               style={{
                 objectFit: "cover",
               }}
-            
             />
           </div>
         </div>
+      </section>
+      <section>
+      <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-center py-8">
+              {stringCarouselThree}
+            </h2>
+        <Carousel carousel={dataCarouselthree} />
       </section>
     </main>
   );
