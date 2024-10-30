@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type dataStatsType = (
   | {
       id: string;
@@ -16,3 +18,16 @@ export type dataStatsType = (
       sub2: string;
     }
 )[];
+
+export type dataCarouselType = {
+  id: number;
+  image: StaticImageData;
+  title: string;
+}[];
+
+export type dataCarouselReduce = {
+  id: number;
+  image: StaticImageData;
+  text: string;
+  title: string;
+};

@@ -4,7 +4,6 @@ import Image from "next/image";
 import Svg911 from "../_components/Svg911";
 import porsche from "@/public/porsche.avif";
 import Tittle from "../_components/Tittle";
-import back from "@/public/back.avif"
 
 type Props = {};
 function Under({}: Props) {
@@ -22,7 +21,7 @@ function Under({}: Props) {
         />
       </div>
       <div className="  flex flex-col justify-center items-center   h-60 sm:h-80 bg-zinc-950 lg:pt-20 row-start-2 col-start-2 ">
-        <Tittle text={dataUnder[0]} />
+        <Tittle text={dataUnder[0]} color="text-zinc-100"/>
         <small className="mt-4 text-gray-100 bg-gray-800/60 rounded py-0.5 px-1 mb-6">
           {dataUnder[1]}
         </small>

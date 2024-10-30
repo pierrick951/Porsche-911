@@ -16,9 +16,10 @@ function Turbo({}: Props) {
       </div>
       <div className="h-auto bg-zinc-950 flex flex-col gap-2 items-center justify-center py-10 lg:py-2">
         <div className="max-w-5xl text-center md:-translate-y-1/3 ">
-            
-              <h1 className=" text-2xl  md:text-4xl lg:text-5xl font-semibold text-white pb-6">{dataTurbo[0]}</h1>
-              <p className="text-white text-lg md:text-xl px-4">{dataTurbo[1]}</p>
+          <h1 className=" text-2xl  md:text-4xl lg:text-5xl font-semibold text-white pb-6">
+            {dataTurbo[0]}
+          </h1>
+          <p className="text-white text-lg md:text-xl px-4">{dataTurbo[1]}</p>
         </div>
       </div>
     </div>
