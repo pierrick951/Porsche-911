@@ -38,7 +38,7 @@ function Stats({}: Props) {
           <Button text={phraseStat} />
         </div>
       </div>
-      <Image className=" lg:max-w-2xl" src={back} alt="back of the porsche" />
+      <Image className=" lg:max-w-2xl" src={back} alt="back of the porsche" loading="lazy" />
     </div>
   );
 }

@@ -1,30 +1,37 @@
 "use client";
 
+import Image from "next/image";
 import ReactPlayer from "react-player";
+
+import { MdOutlineViewInAr } from "react-icons/md";
+
+import { dataNine } from "./data";
 
 import Stats from "./_layout/Stats";
 import Under from "./_layout/Under";
 import Turbo from "./_layout/Turbo";
 
 import Carousel from "./_components/Carousel";
-import Image from "next/image";
+import Button from "./_components/Button";
+import Tittle from "./_components/Tittle";
+
 import turbo2 from "@/public/turbo2.avif";
 import portiere from "@/public/portiere.avif";
-import { dataNine } from "./data";
 import lastturbo from "@/public/lastturbo.avif";
-import { stringCarouselThree } from "./data";
+import chronographe from "@/public/chronographe.avif";
+
+import test from "@/public/test.png";
 
 import {
+  dataCard,
   dataCarouselOne,
   dataCarouselTwo,
+  dataLastSection,
+  stringCarouselThree,
   stringCrouselTwo,
   string360view,
-  dataCarouselthree
+  dataCarouselthree,
 } from "../app/data";
-import Tittle from "./_components/Tittle";
-import { MdOutlineViewInAr } from "react-icons/md";
-import test from "@/public/test.png";
-import Button from "./_components/Button";
 
 const icon: JSX.Element = <MdOutlineViewInAr />;
 
@@ -142,10 +149,51 @@ export default function Home() {
         </div>
       </section>
       <section>
-      <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-center py-8">
-              {stringCarouselThree}
-            </h2>
+        <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-center py-8">
+          {stringCarouselThree}
+        </h2>
         <Carousel carousel={dataCarouselthree} />
+      </section>
+      <section>
+        <div className="  flex items-center justify-center overflow-hidden py-16  mx-5">
+          <div className="relative max-w-5xl  w-full mx-auto bg-red-400 min-h-[30em] rounded-xl z-10 overflow-hidden">
+            <div className="absolute h-full top-0 left-0 bg-gradient-to-r from-zinc-900/80 z-10 max-w-48 w-full"></div>
+            <Image
+              className="absolute inset-0 -z-10 h-full w-full object-cover "
+              src={chronographe}
+              alt="watch"
+            />
+
+            <div className=" relative z-30  w-full p-8 flex flex-col justify-start inset-0 md:text-start text-center">
+              <h1 className="text-white font-bold text-2xl ">
+                {dataLastSection[0]}
+              </h1>
+              <p className="max-w-xs py-4 text-white p">{dataLastSection[1]}</p>
+              <div>
+                <Button text={dataLastSection[2]} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+
+         <div className="flex flex-col lg:flex-row gap-5 justify-center py-4 px-5">
+          {dataCard.map((item) => {
+            return ( 
+              <div className=" max-w-xs w-full h-96 rounded-xl p-5 relative flex items-end  justify-end flex-col overflow-hidden">
+                <Image 
+                className="absolute inset-0 -z-10 h-full object-cover"
+                src={item.image} alt={item.title}/>
+                <div className="">
+                      <h1 className="text-xl font-bold text-white">{item.title}</h1>
+                      <p className="max-w-xs w-full text-white py-4">{item.text}</p>
+                      <Button text={item.button}/>
+                </div>
+              </div>
+            )
+          })}
+         </div>
       </section>
     </main>
   );

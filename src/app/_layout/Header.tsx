@@ -66,6 +66,7 @@ const Header = () => {
               width="30"
               height="40"
               alt="Porsche"
+              
             ></img>
           </div>
 

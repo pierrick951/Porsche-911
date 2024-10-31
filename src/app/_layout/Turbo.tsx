@@ -12,6 +12,7 @@ function Turbo({}: Props) {
           className="w-full object-cover object-center h-52 md:h-[30em] lg:h-[40em]"
           src={turbo}
           alt="back"
+          loading="lazy"
         />
       </div>
       <div className="h-auto bg-zinc-950 flex flex-col gap-2 items-center justify-center py-10 lg:py-2">

@@ -26,6 +26,14 @@ import wheel from '@/public/wheel.avif'
 import wallet from '@/public/wallet.avif'
 import letter from '@/public/letter.avif'
 import carousel36 from "@/public/carousel36.avif";
+
+
+//for card 
+import sander from  "@/public/sonder.avif"
+import manufacture from '@/public/manufacture.avif'
+import contact from '@/public/contact.avif'
+
+
 export const dataHeader: string[] = [
   "Menu",
   "Porsche",
@@ -190,3 +198,18 @@ export const dataCarouselthree: dataCarouselType = [
     title: "Embossing.",
   },
 ];
+
+
+export const dataLastSection : string[] =  [
+
+  "Porsche Design Chonograph.",
+  "Limited to 1,974 pieces, the Porsche Design Chronograph 911 Turbo 50 Years combines classic design with modern technology.",
+  "To the Chronograph"
+]
+
+
+export  const  dataCard =  [
+  {id: 1, image: manufacture, title: "Personalization and finishing", button : "To Porsche Exclusive Manufaktur", text : "Discover Porsche Exclusive Manufaktur's customization options for the interior and exterior of your vehicle."},
+  {id: 2, image: sander, title: "Porsche Sonderwunsch.", button : "To Porsche Sonderwunsch", text : "Do you want even more individuality? Have your personal design and equipment wishes installed in the vehicle directly ex-works."},
+  {id: 3, image: contact, title: "Contact. ", button : "Go to contact form", text : "Contact a Porsche Centre near you."},
+] 
