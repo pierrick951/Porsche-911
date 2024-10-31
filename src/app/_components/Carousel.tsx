@@ -66,7 +66,7 @@ function Carousel({ carousel }: Props) {
                 loading="lazy"
               />
               <div className="absolute bottom-0 bg-gradient-to-t from-zinc-950 w-full h-20 flex flex-col  rounded-xl p-5">
-                <h2 className="z-10 text-2xl font-mono font-semibold text-white">
+                <h2 className="z-10 text-2xl font-mono font-semibold text-white pb-3">
                   {item.title}
                 </h2>
               </div>
