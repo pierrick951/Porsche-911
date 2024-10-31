@@ -1,3 +1,4 @@
+// eslint-disable-next-line @next/next/no-img-element
 "use client";
 import ReactPlayer from "react-player";
 import Svg from "../_components/Svg";
@@ -67,7 +68,7 @@ const Header = () => {
               height="40"
               alt="Porsche"
               
-            ></img>
+            />
           </div>
 
           <div className="w-1/2 flex justify-end">

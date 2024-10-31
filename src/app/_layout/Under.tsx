@@ -5,8 +5,7 @@ import Svg911 from "../_components/Svg911";
 import porsche from "@/public/porsche.avif";
 import Tittle from "../_components/Tittle";
 
-type Props = {};
-function Under({}: Props) {
+function Under() {
   return (
     <div className=" grid grid-cols-3 grid-rows-2 bg-zinc-950">
       <div className="relative  flex  h-[200px] md:h-96 bg-gradient-to-t from-zinc-800 to-zinc-950  row-start-1 col-span-3">

@@ -18,10 +18,12 @@ export default function RootLayout({
         <header><Header/></header>
         
         {children}
-        </body>
+
         <footer className="bg-zinc-950 p-10">
          <Footer/>  
         </footer>
+        </body>
+       
     </html>
   );
 }

@@ -2,8 +2,7 @@ import turbo from "@/public/turbo.avif";
 import Image from "next/image";
 import { dataTurbo } from "../data";
 
-type Props = {};
-function Turbo({}: Props) {
+function Turbo() {
   return (
     <div>
       <div className="relative">
