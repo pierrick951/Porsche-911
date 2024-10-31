@@ -31,3 +31,23 @@ export type dataCarouselReduce = {
   text: string;
   title: string;
 };
+
+
+export type dataSectionFType =  {
+  id: number;
+  title: string;
+  para: string;
+  button: string;
+}[]
+
+export type listFooterType =  ({
+  id: number;
+  stringOne: string;
+  stringTwo: string;
+  stringThird: string;
+} | {
+  id: number;
+  stringOne: string;
+  stringTwo: string;
+  stringThird?: undefined;
+})[]

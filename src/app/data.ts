@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import { dataStatsType } from "./_types";
-import { dataCarouselType } from "./_types";
+import { dataCarouselType,dataSectionFType, listFooterType} from "./_types";
 
 //for carousel one
 import carousel11 from "@/public/carousel11.avif";
@@ -20,18 +20,18 @@ import carousel24 from "@/public/carousel24.avif";
 import carousel25 from "@/public/carousel25.avif";
 
 //frop carousel three
-import chrono from '@/public/carouselchrono.avif'
-import turbo from '@/public/turboturbo.avif'
-import wheel from '@/public/wheel.avif'
-import wallet from '@/public/wallet.avif'
-import letter from '@/public/letter.avif'
+import chrono from "@/public/carouselchrono.avif";
+import turbo from "@/public/turboturbo.avif";
+import wheel from "@/public/wheel.avif";
+import wallet from "@/public/wallet.avif";
+import letter from "@/public/letter.avif";
 import carousel36 from "@/public/carousel36.avif";
 
+//for card
+import sander from "@/public/sonder.avif";
+import manufacture from "@/public/manufacture.avif";
+import contact from "@/public/contact.avif";
 
-//for card 
-import sander from  "@/public/sonder.avif"
-import manufacture from '@/public/manufacture.avif'
-import contact from '@/public/contact.avif'
 
 
 export const dataHeader: string[] = [
@@ -199,17 +199,69 @@ export const dataCarouselthree: dataCarouselType = [
   },
 ];
 
-
-export const dataLastSection : string[] =  [
-
+export const dataLastSection: string[] = [
   "Porsche Design Chonograph.",
   "Limited to 1,974 pieces, the Porsche Design Chronograph 911 Turbo 50 Years combines classic design with modern technology.",
-  "To the Chronograph"
+  "To the Chronograph",
+];
+
+export const dataCard = [
+  {
+    id: 1,
+    image: manufacture,
+    title: "Personalization and finishing",
+    button: "To Porsche Exclusive Manufaktur",
+    text: "Discover Porsche Exclusive Manufaktur's customization options for the interior and exterior of your vehicle.",
+  },
+  {
+    id: 2,
+    image: sander,
+    title: "Porsche Sonderwunsch.",
+    button: "To Porsche Sonderwunsch",
+    text: "Do you want even more individuality? Have your personal design and equipment wishes installed in the vehicle directly ex-works.",
+  },
+  {
+    id: 3,
+    image: contact,
+    title: "Contact. ",
+    button: "Go to contact form",
+    text: "Contact a Porsche Centre near you.",
+  },
+];
+
+export const dataFooter: string[] = [
+  "Current Region / Language",
+  "Canada/English",
+  "Change",
+];
+
+export const dataSectionF :dataSectionFType= [
+  {
+    id: 1,
+    title: "Newsletter",
+    para: "Latest news directly in your inbox",
+    button: "Subcribe",
+  },
+  {
+    id: 2,
+    title:"Contact",
+    para:  "Do you have any questions?",
+    button: "Contact Form",
+  },
+];
+
+
+export const datathirdSection : string[]  = [
+   "Social Meadia",
+   "Get in touch us  via social media.",
 ]
 
 
-export  const  dataCard =  [
-  {id: 1, image: manufacture, title: "Personalization and finishing", button : "To Porsche Exclusive Manufaktur", text : "Discover Porsche Exclusive Manufaktur's customization options for the interior and exterior of your vehicle."},
-  {id: 2, image: sander, title: "Porsche Sonderwunsch.", button : "To Porsche Sonderwunsch", text : "Do you want even more individuality? Have your personal design and equipment wishes installed in the vehicle directly ex-works."},
-  {id: 3, image: contact, title: "Contact. ", button : "Go to contact form", text : "Contact a Porsche Centre near you."},
-] 
+export const  stringLinkFooter   : string = "Compagny"
+
+export const  listFooter : listFooterType =   [
+    {id: 1,  stringOne : "Porsche at a Glance", stringTwo : "Careers",  stringThird : "Press"},
+    {id: 2,  stringOne : "Porsche Cars Canada", stringTwo : "Partner Forum",  stringThird : "Contact Us"},
+    {id: 3,  stringOne : "Sustainbility", stringTwo : "Subsidiaries"},
+]
+

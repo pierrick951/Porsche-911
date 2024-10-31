@@ -178,7 +178,7 @@ export default function Home() {
       </section>
       <section>
 
-         <div className="flex flex-col lg:flex-row gap-5 justify-center py-4 px-5">
+         <div className="flex flex-col lg:flex-row gap-5 justify-center  py-12 lg:py-32 px-5">
           {dataCard.map((item) => {
             return ( 
               <div className=" max-w-xs w-full h-96 rounded-xl p-5 relative flex items-end  justify-end flex-col overflow-hidden">

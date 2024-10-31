@@ -1,4 +1,5 @@
 import Header from "./_layout/Header";
+import Footer from "./_layout/Footer";
 import "./globals.css";
 
 export const metadata = {
@@ -18,6 +19,9 @@ export default function RootLayout({
         
         {children}
         </body>
+        <footer className="bg-zinc-950 p-10">
+         <Footer/>  
+        </footer>
     </html>
   );
 }
