@@ -10,15 +10,12 @@ import { dataHeader } from "../data";
 import { useState } from "react";
 
 const Header = () => {
+  
   const [play, setPlay] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const handleOpen = () =>  setIsOpen(!isOpen);
+  const stopVideo = () => setPlay(!play)
 
-  const stopVideo = () => {
-    if (play === true) {
-      setPlay(!play);
-    } else if (play === false) {
-      setPlay(!play);
-    }
-  };
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
@@ -55,10 +52,13 @@ const Header = () => {
 
       <div className="relative z-10 flex flex-col justify-between min-h-screen">
         <div className="flex flex-row items-center justify-between bg-gradient-to-b from-zinc-800 px-10 lg:px-16 py-4 lg:py-8">
-          <span className="flex flex-row gap-2 items-center text-white w-1/2">
+          <button
+            onClick={handleOpen}
+            className="flex flex-row gap-2 items-center text-white w-1/2 "
+          >
             <CiMenuBurger />
             <span className="hidden md:block">{dataHeader[0]}</span>
-          </span>
+          </button>
           <div>
             <Svg />
             <img
@@ -67,7 +67,6 @@ const Header = () => {
               width="30"
               height="40"
               alt="Porsche"
-              
             />
           </div>
 
@@ -77,11 +76,10 @@ const Header = () => {
         </div>
 
         <div className="text-center flex flex-col items-center lg:px-16  bg-gradient-to-t from-zinc-950">
-
-            <h1 className="flex flex-col items-center gap-2 text-3xl sm:flex-row md:text-5xl lg:text-7xl font-semibold text-gray-100 py-12 text-center">
-              <span>{dataHeader[2]}</span>
-              <span>{dataHeader[3]}</span>
-            </h1>
+          <h1 className="flex flex-col items-center gap-2 text-3xl sm:flex-row md:text-5xl lg:text-7xl font-semibold text-gray-100 py-12 text-center">
+            <span>{dataHeader[2]}</span>
+            <span>{dataHeader[3]}</span>
+          </h1>
           <div className="flex flex-col lg:flex-row w-full items-center">
             <p className=" font-normal  md:font-medium text-xl lg:text-2xl px-5 text-gray-100 w-full max-w-5xl   justify-center mx-auto lg:translate-x-6 pb-5">
               {dataHeader[4]}
@@ -100,6 +98,15 @@ const Header = () => {
           </div>
         </div>
       </div>
+      
+        <div
+          className={`bg-zinc-100 absolute top-0 h-screen  w-full lg:w-[60%]  z-50 transform transition-transform duration-700 ease-in-out   ${
+            isOpen ? "-translate-x-1000" : "-translate-x-full"
+          }`}
+        >
+          <button onClick={handleOpen}>X</button>
+          modale
+        </div>
     </div>
   );
 };

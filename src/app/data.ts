@@ -240,7 +240,7 @@ export const dataSectionF :dataSectionFType= [
     id: 1,
     title: "Newsletter",
     para: "Latest news directly in your inbox",
-    button: "Subcribe",
+    button: "Subscribe",
   },
   {
     id: 2,

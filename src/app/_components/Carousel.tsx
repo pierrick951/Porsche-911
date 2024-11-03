@@ -17,23 +17,22 @@ function Carousel({ carousel }: Props) {
 
 
   const handlePrev: () => void = () => {
-    setCurrentIndex(prevIndex => 
-      prevIndex === 0 ? carousel.length - 1 : prevIndex - 1
-    );
-  };
-  const handleNext: () => void = () => {
-    setCurrentIndex(prevIndex => 
-      prevIndex === carousel.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
-
+  if(currentIndex >  0  &&  carousel.length > -1) setCurrentIndex(prevIndex =>  prevIndex - 1 )
   
+  };
+
+  const handleNext = () => { 
+    if(currentIndex < carousel.length -1) setCurrentIndex(prevIndex => prevIndex + 1)
+
+  }
+
+
 
 
   
   return (
-    <div className=" overflow-hidden">
+    <div className="overflow-x-scroll md:overflow-hidden">
       <div className="flex-row gap-4 justify-end  hidden md:flex mr-32">
         <button
           onClick={handlePrev}
@@ -50,16 +49,17 @@ function Carousel({ carousel }: Props) {
       </div>
 
       <div 
-        style={{
-          transform : `translate-x-[-${currentIndex * 100}%]`,
-               transition: 'transform 0.3s ease-in-out'
-        }}
-      className=" flex flex-row overflow-x-scroll w-auto gap-10 py-5 xl:pl-96 px-5 element">
+       style={{
+        transform: `translateX(-${currentIndex *  40}%)`,
+        transition: "transform 0.8s ease-in-out ",
+      }}
+      className={` flex flex-row  w-auto gap-10 py-5 xl:pl-96 px-5 `}>
         {carousel.map((item) => {
           
           return (
             <div key={item.id} className="relative flex-shrink-0 ">
               <Image
+                onClick={() => handleNext () }
                 className="min-w-[30em] w-auto  object-cover h-[20em] lg:h-[30em] rounded-xl"
                 src={item.image}
                 alt={item.title}
