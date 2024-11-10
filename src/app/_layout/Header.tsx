@@ -10,11 +10,10 @@ import { dataHeader } from "../data";
 import { useState } from "react";
 
 const Header = () => {
-  
   const [play, setPlay] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const handleOpen = () =>  setIsOpen(!isOpen);
-  const stopVideo = () => setPlay(!play)
+  const handleOpen = () => setIsOpen(!isOpen);
+  const stopVideo = () => setPlay(!play);
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
@@ -28,6 +27,7 @@ const Header = () => {
             loop
             width="100%"
             height="100%"
+            alt=""
             style={{
               position: "absolute",
               top: "50%",
@@ -53,6 +53,8 @@ const Header = () => {
       <div className="relative z-10 flex flex-col justify-between min-h-screen">
         <div className="flex flex-row items-center justify-between bg-gradient-to-b from-zinc-800 px-10 lg:px-16 py-4 lg:py-8">
           <button
+            aria-expanded={isOpen ?  true : false}
+            aria-label="open the menu"
             onClick={handleOpen}
             className="flex flex-row gap-2 items-center text-white w-1/2 "
           >
@@ -98,15 +100,17 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
-        <div
-          className={`bg-zinc-100 absolute top-0 h-screen  w-full lg:w-[60%]  z-50 transform transition-transform duration-700 ease-in-out   ${
-            isOpen ? "-translate-x-1000" : "-translate-x-full"
-          }`}
-        >
-          <button onClick={handleOpen}>X</button>
-          modale
-        </div>
+
+      <div
+        className={`bg-zinc-100 absolute top-0 h-screen  w-full lg:w-[60%]  z-50 transform transition-transform duration-700 ease-in-out   ${
+          isOpen ? "-translate-x-1000" : "-translate-x-full"
+        }`}
+      >
+        <button aria-label="close the menu" aria-hidden onClick={handleOpen}>
+          X
+        </button>
+        modale
+      </div>
     </div>
   );
 };
